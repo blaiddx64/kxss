@@ -1,3 +1,7 @@
+# Disclaimer
+
+This is a fork from [tomnomnom kxss](https://github.com/tomnomnom/hacks/tree/master/kxss).
+
 # kxss
 
 I don't know what this name is. There might even be something that has this name already,

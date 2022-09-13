@@ -13,5 +13,5 @@ go get github.com/blaiddx64/kxss
 ```bash
 cat urls.txt | kxss
 
-URL: www.xxxxxxx.com?vuln=1337 Param: vuln Reflects: < > " '
+URL: www.xxxxxxx.com?vuln=1337 Param: vuln Reflects: " ' < >
 ```

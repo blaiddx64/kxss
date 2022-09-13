@@ -73,6 +73,7 @@ func main() {
 	})
 
 	done := makePool(charChecks, func(c paramCheck, output chan paramCheck) {
+		final_output := []string{c.url, c.param}
 		for _, char := range []string{"\"", "'", "<", ">"} {
 			wasReflected, err := checkAppend(c.url, c.param, "aprefix"+char+"asuffix")
 			if err != nil {
@@ -81,8 +82,11 @@ func main() {
 			}
 
 			if wasReflected {
-				fmt.Printf("param %s is reflected and allows %s on %s\n", c.param, char, c.url)
+				final_output = append(final_output, char)
 			}
+		}
+		if len(final_output) >= 2 {
+			fmt.Printf("URL: %s Param: %s Reflects: %v \n", final_output[0] , final_output[1],final_output[2:])
 		}
 	})
 

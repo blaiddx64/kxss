@@ -85,7 +85,9 @@ func main() {
 				final_output = append(final_output, char)
 			}
 		}
-		if len(final_output) >= 2 {
+
+		//fmt.Printf("%s", final_output)
+		if len(final_output) > 2 {
 			fmt.Printf("URL: %s Param: %s Reflects: %v \n", final_output[0] , final_output[1],final_output[2:])
 		}
 	})
